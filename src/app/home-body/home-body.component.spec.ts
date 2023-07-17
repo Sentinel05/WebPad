@@ -9,15 +9,20 @@ describe('HomeBodyComponent', () => {
   let fixture: ComponentFixture<HomeBodyComponent>;
 
   beforeEach(() => {
+    console.log('beforeEach is called!');
     TestBed.configureTestingModule({
       declarations: [HomeBodyComponent],
       providers: [GeneralServiceService]
     });
+    service = TestBed.inject(GeneralServiceService);
     fixture = TestBed.createComponent(HomeBodyComponent);
-    // service = TestBed.inject(GeneralServiceService);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  // it(); -- normal test case
+  // fit(); -- focused test case
+  // xit(); -- to hault/ignore
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -38,11 +43,11 @@ describe('HomeBodyComponent', () => {
     expect(val).not.toBe(5);
   })
 
-  // it('should call dummyFunc()', () => {
-  //   spyOn(service, "dummyFunc");
-  //   const test = service.dummyFunc();
-  //   expect(service.dummyFunc).toHaveBeenCalled();
-  // })
+  it('should call dummyFunc()', () => {
+    spyOn(service, "dummyFunc");
+    const test = service.dummyFunc();
+    expect(service.dummyFunc).toHaveBeenCalled();
+  })
 
   it('should call multiply()', () => {
     spyOn(component, "multiply");
