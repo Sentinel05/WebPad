@@ -4,28 +4,28 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-navigation-bar',
   templateUrl: './navigation-bar.component.html',
-  styleUrls: ['./navigation-bar.component.css']
+  styleUrls: ['./navigation-bar.component.css'],
 })
 export class NavigationBarComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor (private router: Router) {}
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.navigateToHome();
+  }
 
   navigateToHome() {
     this.router.navigate(['/home']);
   }
 
-  navigateToAbout () {
+  navigateToAbout() {
     this.router.navigate(['/about']);
   }
 
-  navigateToContact () {
+  navigateToContact() {
     this.router.navigate(['/contact']);
   }
 
-  navigateToRemarks () {
+  navigateToRemarks() {
     this.router.navigate(['/remarks']);
   }
-
 }
