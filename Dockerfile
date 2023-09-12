@@ -2,7 +2,7 @@
 FROM nginx:alpine
 
 # Copy the built Angular app to the Nginx directory
-COPY /dist/web-pad/usr/share/nginx/html
+COPY /dist/web-pad/ /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80
