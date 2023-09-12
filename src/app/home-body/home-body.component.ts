@@ -26,7 +26,7 @@ export class HomeBodyComponent {
 
   removeTask(id: number) {
     this.tasks = this.tasks.filter((item: { id: number }) => {
-      item.id != id;
+      return item.id != id;
     });
   }
 
