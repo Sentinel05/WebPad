@@ -1,5 +1,17 @@
-<br />
-
-<div id="home">
-  <p>Main content will come here</p>
+<div class="home-page">
+  <div class="outer-container">
+    <div class="input-add">
+      <input #addtask type="text" placeholder="Add your notes" />
+      <button id="new-task-button" (click)="newTask(addtask.value)">+</button>
+    </div>
+    <div class="remove-all-container" *ngIf="tasks.length >= 1">
+      <button (click)="clearAll()">Remove All</button>
+    </div>
+    <div class="all-notes">
+      <div class="notes-card" *ngFor="let item of tasks">
+        <p>{{ item.title }}</p>
+        <button (click)="removeTask(item.id)">x</button>
+      </div>
+    </div>
+  </div>
 </div>
