@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { GeneralServiceService } from '../general-service.service';
 
 @Component({
@@ -12,6 +12,8 @@ export class HomeBodyComponent {
   // ans=15;
   tasks: any = [];
 
+  @ViewChild('addtask') addtaskInput!: ElementRef;
+
   constructor(private dataService: GeneralServiceService) {
     // this.dataService.dummyFunc();
     // this.multiply(this.a, this.b);
@@ -20,8 +22,8 @@ export class HomeBodyComponent {
   newTask(task: string) {
     if (task != '') {
       this.tasks.push({ id: this.tasks.length, title: task });
-      console.log(this.tasks);
     }
+    this.addtaskInput.nativeElement.value = '';
   }
 
   removeTask(id: number) {

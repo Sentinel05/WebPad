@@ -1,7 +1,12 @@
 <div class="home-page">
   <div class="outer-container">
     <div class="input-add">
-      <input #addtask type="text" placeholder="Add your notes" />
+      <input
+        #addtask
+        type="text"
+        placeholder="Add your notes"
+        (keydown.enter)="newTask(addtask.value)"
+      />
       <button id="new-task-button" (click)="newTask(addtask.value)">+</button>
     </div>
     <div class="remove-all-container" *ngIf="tasks.length >= 1">

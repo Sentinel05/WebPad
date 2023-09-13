@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'home', component: HomeBodyComponent },
   { path: 'contact', component: ContactBodyComponent },
   { path: 'about', component: AboutBodyComponent },
-  { path: 'remarks', component: RemarksBodyComponent }
+  { path: 'remarks', component: RemarksBodyComponent },
 ];
 
 @NgModule({
@@ -26,13 +26,10 @@ const routes: Routes = [
     HomeBodyComponent,
     ContactBodyComponent,
     AboutBodyComponent,
-    RemarksBodyComponent
+    RemarksBodyComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot(routes)
-  ],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

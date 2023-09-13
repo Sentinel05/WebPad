@@ -1,13 +1,12 @@
 html,
 body {
   height: 100%;
-  margin: 0;
 }
 
 .nav-bar {
-    background-color: rgb(175, 196, 215);
+  background-color: rgb(175, 196, 215);
 }
 
 .body {
-    background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
