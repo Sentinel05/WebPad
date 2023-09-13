@@ -1,0 +1,29 @@
+.heading-container {
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.remarks-content {
+  background-color: #fff;
+  color: #555;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+.remarks-content p {
+  text-align: justify;
+  line-height: 1.6;
+}

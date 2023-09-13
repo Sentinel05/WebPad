@@ -6,8 +6,11 @@
         type="text"
         placeholder="Add your notes"
         (keydown.enter)="newTask(addtask.value)"
+        class="col-sm-8 col-md-8 col-lg-8 col-xl-8"
       />
-      <button id="new-task-button" (click)="newTask(addtask.value)">+</button>
+      <button id="new-task-button" (click)="newTask(addtask.value)">
+        <mat-icon>add</mat-icon>
+      </button>
     </div>
     <div class="remove-all-container" *ngIf="tasks.length >= 1">
       <button (click)="clearAll()">Remove All</button>
@@ -15,7 +18,9 @@
     <div class="all-notes">
       <div class="notes-card" *ngFor="let item of tasks">
         <p>{{ item.title }}</p>
-        <button (click)="removeTask(item.id)">x</button>
+        <button (click)="removeTask(item.id)">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
       </div>
     </div>
   </div>

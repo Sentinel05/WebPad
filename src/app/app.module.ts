@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -9,6 +10,7 @@ import { ContactBodyComponent } from './contact-body/contact-body.component';
 import { AboutBodyComponent } from './about-body/about-body.component';
 import { RouterModule, Routes } from '@angular/router';
 import { RemarksBodyComponent } from './remarks-body/remarks-body.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
   { path: '', component: HomeBodyComponent },
@@ -28,7 +30,12 @@ const routes: Routes = [
     AboutBodyComponent,
     RemarksBodyComponent,
   ],
-  imports: [BrowserModule, RouterModule.forRoot(routes)],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
+    MatIconModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

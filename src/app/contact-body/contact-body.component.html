@@ -1,1 +1,65 @@
-<p>Will provide some way to contact me!</p>
+<div class="contact-header">
+  <div>
+    <h3>Contact with</h3>
+    <span
+      class="icons"
+      style="
+        display: inline-flex;
+        align-items: center;
+        color: rgb(213, 154, 66);
+        background-color: black;
+        padding: 10px;
+        border-radius: 5px;
+      "
+    >
+      <mat-icon>email</mat-icon>
+    </span>
+    <span
+      class="icons"
+      style="
+        display: inline-flex;
+        align-items: center;
+        color: grey;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 50px;
+      "
+    >
+      <mat-icon>call</mat-icon>
+    </span>
+    <span
+      class="icons"
+      style="
+        display: inline-flex;
+        align-items: center;
+        color: red;
+        background-color: black;
+        padding: 10px;
+        border-radius: 5px;
+      "
+    >
+      <mat-icon>place</mat-icon>
+    </span>
+  </div>
+  <div class="or-line">
+    <span class="before-line"></span>
+    <span class="or-text">OR</span>
+    <span class="after-line"></span>
+  </div>
+</div>
+
+<div class="contact-container">
+  <div class="contact-item">
+    <label>Name:</label>
+    <span>{{ name }}</span>
+  </div>
+  <div class="contact-item">
+    <label>Email:</label>
+    <span>{{ email }}</span>
+  </div>
+  <div class="contact-item">
+    <label>City:</label>
+    <span>{{ city }}</span>
+  </div>
+</div>
