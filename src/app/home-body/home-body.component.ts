@@ -1,5 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { GeneralServiceService } from '../general-service.service';
+import { v4 as uuidv4 } from 'uuid';
 
 @Component({
   selector: 'app-home-body',
@@ -28,7 +29,8 @@ export class HomeBodyComponent implements OnInit {
 
   newTask(task: string) {
     if (task != '') {
-      this.tasks.push({ id: this.tasks.length, title: task });
+      const uniqueId = uuidv4();
+      this.tasks.push({ id: uniqueId, title: task });
     }
     this.addtaskInput.nativeElement.value = '';
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
